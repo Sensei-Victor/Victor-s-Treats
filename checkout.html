@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Victor's Treats</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Victor's Treats</div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#menu">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">
+          Cart 🛒
+          <span id="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="checkout-page">
+      <h1>Checkout</h1>
+
+      <div class="checkout-container">
+        <section class="customer-details">
+          <h2>Customer Information</h2>
+
+          <form id="checkout-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Delivery Address</label>
+
+              <textarea
+                id="address"
+                rows="4"
+                placeholder="Enter your delivery address"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="payment">Payment Method</label>
+
+              <select id="payment" required>
+                <option value="">Select payment method</option>
+                <option value="cash">Cash on Delivery</option>
+                <option value="transfer">Bank Transfer</option>
+              </select>
+            </div>
+
+            <button type="submit" id="place-order-btn">Place Order</button>
+          </form>
+        </section>
+
+        <section class="checkout-summary">
+          <h2>Your Order</h2>
+
+          <div id="checkout-items"></div>
+
+          <hr />
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+
+            <span id="checkout-subtotal"> ₦0 </span>
+          </div>
+
+          <div class="summary-row">
+            <span>Delivery</span>
+
+            <span id="checkout-delivery"> ₦0 </span>
+          </div>
+
+          <hr />
+
+          <div class="summary-row total">
+            <strong>Total</strong>
+
+            <strong id="checkout-total"> ₦0 </strong>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h3>VICTOR'S TREATS</h3>
+
+          <p>Delicious food made with love.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+
+          <a href="index.html#menu">Menu</a>
+
+          <a href="about.html">About</a>
+
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+
+          <p>📞 09076770312</p>
+
+          <p>📧 innocentikenna50@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2026 Victor's Treats. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

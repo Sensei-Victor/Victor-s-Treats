@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor's Treats | Home</title>
+
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">Victor's Treats</div>
+
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">
+          Cart 🛒
+          <span id="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="welcome">WELCOME TO VICTOR'S TREATS</p>
+
+        <h1>
+          Delicious Food,<br />
+          Made With Love
+        </h1>
+
+        <p class="hero-description">
+          Fresh, tasty and affordable meals prepared just for you. Enjoy
+          delicious Nigerian and foreign dishes anytime.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="order-btn">Order Now</a>
+          <a href="#menu" class="menu-btn">View Menu</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="img/home.jpg" alt="Delicious food" />
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu-section" id="menu">
+      <div class="section-title">
+        <p>OUR MENU</p>
+        <h2>Our Popular Dishes</h2>
+        <span>Choose from some of our delicious meals</span>
+      </div>
+
+      <!-- CATEGORY BUTTONS -->
+      <div class="category">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="nigerian">Nigerian</button>
+        <button class="category-btn" data-category="foreign">Foreign</button>
+        <button class="category-btn" data-category="soup">Soup</button>
+        <button class="category-btn" data-category="drinks">Drinks</button>
+      </div>
+
+      <div class="food-container">
+        <div class="food-card" data-category="nigerian">
+          <img src="img/jollof.jpg" alt="Jollof Rice" />
+
+          <div class="food-info">
+            <h3>Jollof Rice</h3>
+            <p>Delicious Nigerian jollof rice served fresh.</p>
+            <div class="food-bottom">
+              <strong>₦3,000</strong>
+
+              <button class="add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="foreign">
+          <img src="img/rissoto.jpg" alt="Fried Rice" />
+
+          <div class="food-info">
+            <h3>Rissoto</h3>
+
+            <p>Tasty rissoto prepared with fresh ingredients.</p>
+
+            <div class="food-bottom">
+              <strong>₦3,500</strong>
+
+              <button class="add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="nigerian">
+          <img src="img/chicken.jpg" alt="Chicken" />
+          <div class="food-info">
+            <h3>Grilled Chicken</h3>
+
+            <p>Juicy and perfectly grilled chicken.</p>
+
+            <div class="food-bottom">
+              <strong>₦4,000</strong>
+
+              <button class="add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="soup">
+          <img src="img/soup.jpg" alt="Soup" />
+
+          <div class="food-info">
+            <h3>Egusi Soup</h3>
+
+            <p>Rich and delicious Nigerian egusi soup.</p>
+
+            <div class="food-bottom">
+              <strong>₦2,500</strong>
+
+              <button class="add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="foreign">
+          <img src="img/pasta.jpg" alt="Pasta" />
+
+          <div class="food-info">
+            <h3>Special Pasta</h3>
+
+            <p>Creamy and tasty pasta made specially for you.</p>
+
+            <div class="food-bottom">
+              <strong>₦3,500</strong>
+
+              <button class="add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card" data-category="drinks">
+          <img src="img/drink.jpg" alt="Cold Drink" />
+
+          <div class="food-info">
+            <h3>Cold Drinks</h3>
+
+            <p>Refreshing drinks to enjoy with your meal.</p>
+
+            <div class="food-bottom">
+              <strong>₦1,000</strong>
+
+              <button class="add-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer-section">
+      <div class="section-title">
+        <p>WHAT WE OFFER</p>
+        <h2>Something For Everyone</h2>
+      </div>
+
+      <div class="offer-container">
+        <div class="offer-card">
+          <div class="offer-icon">🍛</div>
+          <h3>Nigerian Meals</h3>
+          <p>Enjoy your favourite Nigerian dishes prepared fresh.</p>
+        </div>
+
+        <div class="offer-card">
+          <div class="offer-icon">🍝</div>
+          <h3>Foreign Dishes</h3>
+          <p>Delicious international meals prepared with care.</p>
+        </div>
+
+        <div class="offer-card">
+          <div class="offer-icon">🥤</div>
+          <h3>Refreshing Drinks</h3>
+          <p>Cool and refreshing drinks to complete your meal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about-preview">
+      <div class="about-image">
+        <img src="img/friedrice.jpg" alt="Victor's Treats" />
+      </div>
+
+      <div class="about-text">
+        <p class="small-heading">ABOUT VICTOR'S TREATS</p>
+        <h2>Good Food Brings People Together</h2>
+        <p>
+          At Victor's Treats, we believe everyone deserves to enjoy delicious
+          and affordable meals. Our meals are prepared with fresh ingredients
+          and lots of love.
+        </p>
+
+        <a href="about.html" class="read-more"> Read More </a>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+      <h2>Hungry?</h2>
+      <p>Let Victor's Treats satisfy your cravings today.</p>
+      <a href="#menu"> Order Your Meal </a>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h3>VICTOR'S TREATS</h3>
+
+          <p>Delicious food made with love.</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <a href="home.html">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+
+          <p>📞 09076770312</p>
+          <p>📧 innocentikenna50@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2026 Victor's Treats. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="home.js"></script>
+  </body>
+</html>
