@@ -1,11 +1,10 @@
-
 // CATEGORY FILTERING
 
 const categoryButtons = document.querySelectorAll(".category-btn");
 const foodCards = document.querySelectorAll(".food-card");
 
 categoryButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+  button.addEventListener("click", () => {
     // Remove active class from all buttons
     categoryButtons.forEach((btn) => {
       btn.classList.remove("active");
@@ -66,20 +65,3 @@ addCartButtons.forEach((button) => {
     alert(name + " added to cart!");
   });
 });
-
-// UPDATE CART COUNT
-function updateCartCount() {
-  const cartCount = document.getElementById("cart-count");
-
-  if (!cartCount) return;
-
-  let totalItems = 0;
-
-  cart.forEach((item) => {
-    totalItems += item.quantity;
-  });
-
-  cartCount.textContent = totalItems;
-}
-// RUN CART COUNT
-updateCartCount();

@@ -159,8 +159,7 @@ function updateCartTotal() {
 
   // DELIVERY PRICE
 
-  let delivery = 0;
-
+  let delivery = cart.length > 0 ? 1000 : 0;
   // TOTAL
 
   let total = subtotal + delivery;

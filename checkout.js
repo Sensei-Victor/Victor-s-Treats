@@ -25,7 +25,7 @@ function displayCheckoutItems() {
       <div class="empty-order">
         <p>Your cart is empty.</p>
 
-        <a href="home.html#menu">
+        <a href="index.html#menu">
           Go To Menu
         </a>
       </div>
@@ -74,7 +74,7 @@ function updateCheckoutTotal() {
     subtotal += item.price * item.quantity;
   });
 
-  let delivery = 0;
+  let delivery = cart.length > 0 ? 1000 : 0;
   let total = subtotal + delivery;
 
   checkoutSubtotal.textContent = "₦" + subtotal.toLocaleString();
@@ -100,14 +100,12 @@ checkoutForm.addEventListener("submit", (event) => {
     total += item.price * item.quantity;
   });
 
-
   localStorage.removeItem("cart");
 
   cart = [];
 
   window.location.href = "success.html";
 });
-
 
 updateCartCount();
 
