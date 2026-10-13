@@ -82,29 +82,78 @@ function updateCheckoutTotal() {
   checkoutTotal.textContent = "₦" + total.toLocaleString();
 }
 
-checkoutForm.addEventListener("submit", (event) => {
+checkoutForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   if (cart.length === 0) {
     alert("Your cart is empty!");
-
     return;
   }
 
+  const button = document.getElementById("place-order-btn");
+  button.disabled = true;
+  button.textContent = "Placing order...";
+
   const name = document.getElementById("name").value;
-  const payment = document.getElementById("payment").value;
 
-  let total = 0;
+  let subtotal = 0;
+  const items = cart
+    .map((item) => {
+      subtotal += item.price * item.quantity;
+      return (
+        item.name +
+        " x" +
+        item.quantity +
+        " = ₦" +
+        (item.price * item.quantity).toLocaleString()
+      );
+    })
+    .join("\n");
 
-  cart.forEach((item) => {
-    total += item.price * item.quantity;
-  });
+  const delivery = 1000;
+  const total = subtotal + delivery;
 
-  localStorage.removeItem("cart");
+  const order = {
+    _subject: "New Order from " + name,
+    name: name,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    address: document.getElementById("address").value,
+    payment: document.getElementById("payment").value,
+    items: items,
+    subtotal: "₦" + subtotal.toLocaleString(),
+    delivery: "₦" + delivery.toLocaleString(),
+    total: "₦" + total.toLocaleString(),
+  };
 
-  cart = [];
+  try {
+    const response = await fetch("https://formspree.io/f/myekdkwa", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(order),
+    });
 
-  window.location.href = "success.html";
+    if (response.ok) {
+      localStorage.setItem(
+        "lastOrder",
+        JSON.stringify({ payment: order.payment, total: total }),
+      );
+      localStorage.removeItem("cart");
+      cart = [];
+      window.location.href = "success.html";
+    } else {
+      throw new Error("Failed");
+    }
+  } catch (error) {
+    alert(
+      "Sorry, your order could not be sent. Please call 09076770312 to order.",
+    );
+    button.disabled = false;
+    button.textContent = "Place Order";
+  }
 });
 
 updateCartCount();

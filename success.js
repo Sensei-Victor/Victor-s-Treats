@@ -9,3 +9,17 @@ cart.forEach((item) => {
 });
 
 cartCount.textContent = totalItems;
+
+const transferDetails = document.getElementById("transfer-details");
+const transferTotal = document.getElementById("transfer-total");
+
+try {
+  const lastOrder = JSON.parse(localStorage.getItem("lastOrder"));
+
+  if (lastOrder && lastOrder.payment === "transfer") {
+    transferTotal.textContent = "₦" + lastOrder.total.toLocaleString();
+    transferDetails.hidden = false;
+  }
+} catch (error) {
+  // ignore bad data
+}

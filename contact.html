@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Contact | Victor's Treats</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="contact.css" />
   </head>
 
@@ -13,14 +16,13 @@
     <!-- HEADER -->
     <header>
       <div class="logo">Victor's Treats</div>
-
       <nav>
         <a href="index.html">Home</a>
         <a href="index.html#menu">Menu</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="active">Contact</a>
         <a href="cart.html">
-          Cart 🛒
+          Cart <i class="fa-solid fa-cart-shopping"></i>
           <span id="cart-count">0</span>
         </a>
       </nav>
@@ -54,25 +56,31 @@
 
         <div class="contact-details">
           <div class="contact-item">
-            <div class="contact-icon">📞</div>
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
 
             <div>
               <h3>Phone</h3>
-              <p>09076770312</p>
+              <p><a href="tel:09076770312">09076770312</a></p>
             </div>
           </div>
 
           <div class="contact-item">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
 
             <div>
               <h3>Email</h3>
-              <p>innocentikenna50@gmail.com</p>
+              <p>
+                <a href="mailto:innocentikenna50@gmail.com"
+                  >innocentikenna50@gmail.com</a
+                >
+              </p>
             </div>
           </div>
 
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon">
+              <i class="fa-solid fa-map-marker-alt"></i>
+            </div>
 
             <div>
               <h3>Location</h3>
@@ -126,7 +134,7 @@
 
             <textarea
               id="message"
-              rows="6"
+              rows="4"
               placeholder="Write your message..."
               required
             ></textarea>
@@ -166,9 +174,16 @@
 
         <div>
           <h3>Contact</h3>
-
-          <p>📞 09076770312</p>
-          <p>📧 innocentikenna50@gmail.com</p>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:09076770312">09076770312</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:innocentikenna50@gmail.com"
+              >innocentikenna50@gmail.com</a
+            >
+          </p>
         </div>
       </div>
 

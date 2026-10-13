@@ -14,7 +14,7 @@ function displayCart() {
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = `
       <div class="empty-cart">
-        <h3>Your cart is empty 🛒</h3>
+       <h3>Your cart is empty <i class="fa-solid fa-cart-shopping"></i></h3>
         <p>Add some delicious food from our menu!</p>
       </div>
     `;

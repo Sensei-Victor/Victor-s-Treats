@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -253,6 +257,10 @@ footer {
 .footer-content a:hover {
   color: #e67e22;
 }
+.footer-content p a {
+  color: whitesmoke;
+  text-decoration: none;
+}
 
 .copyright {
   text-align: center;
@@ -260,7 +268,6 @@ footer {
   padding: 20px;
   color: #aaa;
 }
-
 
 @media (max-width: 768px) {
   header {
@@ -294,20 +301,16 @@ footer {
   header {
     padding: 18px 15px;
   }
-
   .checkout-page {
     padding: 30px 15px;
   }
-
   .checkout-page > h1 {
     font-size: 28px;
   }
-
   .customer-details,
   .checkout-summary {
     padding: 20px;
   }
-
   .customer-details h2 {
     font-size: 21px;
   }

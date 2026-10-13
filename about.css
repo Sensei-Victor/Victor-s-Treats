@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -365,4 +369,19 @@ footer {
   .cta h2 {
     font-size: 28px;
   }
+}
+
+.value-icon i {
+  color: #a3581f;
+  font-size: 40px;
+}
+
+.footer-content i {
+  color: #ffd28a;
+  margin-right: 8px;
+}
+
+.footer-content p a {
+  display: inline;
+  margin-bottom: 0;
 }

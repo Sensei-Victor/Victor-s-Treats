@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Successful | Victor's Treats</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="success.css" />
   </head>
 
@@ -17,7 +22,7 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="cart.html">
-          Cart 🛒
+          Cart <i class="fa-solid fa-cart-shopping"></i>
           <span id="cart-count">0</span>
         </a>
       </nav>
@@ -36,6 +41,32 @@
         <p>
           Your order has been received and we will begin preparing it shortly.
         </p>
+
+        <div id="transfer-details" class="transfer-details" hidden>
+          <h2>Complete Your Payment</h2>
+
+          <p>Please transfer <strong id="transfer-total"></strong> to:</p>
+
+          <ul>
+            <li><span>Bank</span> <strong>Opay</strong></li>
+            <li><span>Account Number</span> <strong>9076770312</strong></li>
+            <li><span>Account Name</span> <strong>Ikenna Innocent</strong></li>
+          </ul>
+
+          <p>
+            After paying, send your proof of payment on WhatsApp so we can
+            confirm your order.
+          </p>
+
+          <a
+            class="whatsapp-btn"
+            href="https://wa.me/2349076770312?text=Hello%2C%20I%20just%20made%20a%20transfer%20for%20my%20order."
+            target="_blank"
+            rel="noopener"
+          >
+            Send Proof on WhatsApp
+          </a>
+        </div>
 
         <div class="success-buttons">
           <a href="index.html#menu" class="order-btn"> Order More </a>
@@ -61,9 +92,16 @@
         </div>
 
         <div>
-          <h3>Contact</h3>
-          <p>📞 09076770312</p>
-          <p>📧 innocentikenna50@gmail.com</p>
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:09076770312">09076770312</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:innocentikenna50@gmail.com"
+              >innocentikenna50@gmail.com</a
+            >
+          </p>
         </div>
       </div>
 

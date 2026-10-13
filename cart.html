@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Cart | Victor's Treats</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="cart.css" />
   </head>
 
@@ -19,12 +22,13 @@
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#menu">Menu</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
 
           <li>
             <a href="cart.html" class="active">
-              🛒 Cart
+              <i class="fa-solid fa-cart-shopping"></i> Cart
               <span id="cart-count">0</span>
             </a>
           </li>
@@ -33,7 +37,7 @@
     </header>
 
     <main class="cart-page">
-      <h1>Your Cart 🛒</h1>
+      <h1>Your Cart <i class="fa-solid fa-cart-shopping"></i></h1>
 
       <div class="cart-container">
         <div class="cart-items">
